@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+
+footer{ 
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+.background{
+    padding-bottom: 20px;
+    border-top: solid #008ac0;
+    background-color: #02161d98; 
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.foot_links,.copyright,.foot_textStart,.foot_links a{
+    font-size: 12px;
+    font-family:sans-serif;
+    color:#008ac0;
+    
+}
+
+.foot_links a{
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.footer_logo{
+    width: 200px;
+    padding: 7px;
+    margin: 12px;
+}
+.copyright{
+   margin-top: 20px;
+   text-align: center;
+}
+

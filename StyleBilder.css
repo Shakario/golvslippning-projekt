@@ -1,0 +1,159 @@
+
+/* Hämtar en font från google*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav{ 
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+header{
+    padding-bottom: 20vh;
+
+}
+html{
+    min-height: 100%;
+
+}
+body{
+    background: url(https://www.visitfinland.com/dam/jcr:b54502e4-cded-4a05-8284-5071ee7706d8/Nanguniemi,%20Inarij%C3%A4rvi_PerttiTurunen.jpg)
+    no-repeat center center fixed; 
+    background-position: center;      
+    background-size: cover;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    
+}
+
+/* Under är properties för hela navigerings rutan*/
+
+.vanlig-Nav{    
+    display: flex; 
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.626), rgba(0, 0, 0, 0));
+    align-items: center; 
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Under är properties för logan*/
+
+.logo_img{
+    border: 3px solid #0075a3;
+    border-radius: 7px;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.logo_img:hover{
+    border-color: #00394f;
+}
+
+/* Under är properties för navigerings länkar,kontakt knapp*/
+
+.nav_links li,.nav_links li a,.Kontakt button,.hNav_links li{
+    font-family:"Josefin Sans", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #008ac0;
+}
+
+/* Under är kontakt knapp properties*/
+
+.Kontakt button{
+    padding: 9px 25px;
+    color: #00394f;
+    background-color: #007bac;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.Kontakt button:hover{
+    background-color: #005d82;
+    transition: all 0.3s ease 0s;
+}
+/* Under är properties för navigerings länkar*/
+
+.nav_links{
+    width: 100%;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 6px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    text-decoration:underline;
+    color: #00394f;
+}
+.hNav_links{
+    display: none;
+
+}
+
+
+/*Mobil meny properties under */
+
+@media screen and (max-width: 1000px) {
+
+    nav{
+        background-color: rgba(0, 0, 0, 0.513);
+
+    }
+
+    .logo_img{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 40%;
+    }
+    .hNav_links{
+        display: block;
+        list-style: none; 
+        align-items: center;
+        text-align: center; 
+        border-bottom: 5px solid #0075a3;
+    }
+    
+    .hNav_links li {
+        display: inline-block;
+        padding: 6px;
+        margin: 5px;
+
+    }
+    
+    .hNav_links li a {
+        transition: all 0.3s ease 0s;
+        color: #008ac0;
+    }
+    .hNav_links li a:hover{
+        text-decoration:underline;
+        color: #00394f;
+    }
+    /* ta bort vid mindre skärm*/
+    .nav_links,.Kontakt{
+        display: none;
+    }
+    
+}
+
+

@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+
+/*Ger alla element i hella html sidan samma properties*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+ /*backgrounds attributer*/
+.background {
+    position: fixed;
+    background-image: url('https://www.visitfinland.com/dam/jcr:b54502e4-cded-4a05-8284-5071ee7706d8/Nanguniemi,%20Inarij%C3%A4rvi_PerttiTurunen.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+/*Navigerings del och properties*/
+header{
+    z-index: 10;
+    width: 100%;
+    position: static;
+    padding-bottom: 10vh;
+    
+}
+nav{ 
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.vanlig-Nav{   
+    
+    width: 100%;
+    display: flex; 
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.626), rgba(0, 0, 0, 0));
+    align-items: center; 
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/*----------------------------------------------------------------*/
+
+/* Under är properties för huvud logan*/
+
+.logo_img{
+    border: 3px solid #0075a3;
+    border-radius: 7px;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.logo_img:hover{
+    border-color: #00394f;
+}
+
+/*----------------------------------------------------------------*/
+
+/* Under är properties för navigerings länkar,kontakt knapp*/
+
+.nav_links li,.nav_links li a,.Kontakt button,.hNav_links li{
+    font-family:"Josefin Sans", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #008ac0;
+}
+
+/* Under är kontakt knapp properties*/
+
+.Kontakt button{
+    padding: 9px 25px;
+    color: #00394f;
+    background-color: #007bac;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Under är properties för navigerings länkar i naven*/
+
+.nav_links{
+    width: 100%;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 6px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.hNav_links{
+    display: none;
+
+}
+/*----------------------------------------------------------------*/
+
+/* navigerings element som ändras vid hover*/
+.nav_links li a:hover{
+    text-decoration:underline;
+    color: #00394f;
+}
+.Kontakt button:hover{
+    background-color: #005d82;
+    transition: all 0.3s ease 0s;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+
+/*Mobil meny properties under */
+
+@media screen and (max-width: 1000px) {
+
+    nav{
+        background-color: rgba(0, 0, 0, 0.513);
+
+    }
+
+    .logo_img{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        width: 40%;
+    }
+    .hNav_links{
+        display: block;
+        list-style: none; 
+        align-items: center;
+        text-align: center; 
+        border-bottom: 5px solid #0075a3;
+    }
+    
+    .hNav_links li {
+        display: inline-block;
+        padding: 6px;
+        margin: 5px;
+
+    }
+    
+    .hNav_links li a {
+        transition: all 0.3s ease 0s;
+        color: #008ac0;
+    }
+    .hNav_links li a:hover{
+        text-decoration:underline;
+        color: #00394f;
+    }
+    /*----------------------------------------------------------------*/
+
+    /* ta bort vid mindre skärm*/
+    .nav_links,.Kontakt{
+        display: none;
+    }
+    /*----------------------------------------------------------------*/
+    .sectionTitel{
+        font-size: 20px;
+    }
+    
+    .sectionText{
+     font-size: 13px;
+    }
+
+    /*----------------------------------------------------------------*/
+
+    /*ändrar storleken vid */ 
+    .zommaEfterKlick.zoomed {
+        transform: scale(1.5);
+        transform-origin: center;
+        position: fixed;
+        top: 50%;    
+    }
+    
+}
+/* Används vid störe som är över 1001px*/
+
+@media screen and (min-width: 1001px) {
+    .zommaEfterKlick.zoomed {
+        transform: scale(1.2);
+
+    }
+    
+}
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+/*Sections properties*/
+
+.containerSection{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.contentSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    margin: auto;
+    top: 100px;
+}
+
+.sectionHuvudel,.sectionUnderdel{
+    background-color: #02161d98;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:"Josefin Sans", sans-serif;
+    font-weight: 500;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 80%;
+    text-align: center;
+    
+    
+}
+.sectionTitel{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #008ac0;
+    padding-bottom: 5px;
+    border-bottom:solid #008ac0 ;
+}
+
+.sectionText{
+    color: #008ac0;
+    font-size: 18px;
+    padding-top: 5px;
+    line-height: 1.2;
+
+}
+
+.sectionText a{
+    text-decoration: underline;
+    color: #008ac0;
+}
+
+/*----------------------------------------------------------------*/
+
+/* bilder till huvud section */
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 200px;
+  }
+  
+.image-row img {
+    height: 40vw;
+    width: auto;
+    margin-left: 5px;
+    border: #00394f;
+    border-radius: 50px;
+}
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+/* zoom funktion för att göra bilder störe bid klick*/
+
+.zommaEfterKlick {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.zommaEfterKlick.zoomed {
+    position: fixed;
+    transform-origin: center;
+    z-index: 999;
+    bottom: 100px;
+}
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+
+/*Fotter porperties*/
+
+footer{ 
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*fotter backgrounds properties*/
+.backgfooter{
+    margin-top: auto;
+    position: relative;
+    border-top: solid #008ac0;
+    background-color: #02161d98;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+ /*ändrar text porperies*/
+.foot_links,.copyright,.foot_textStart,.foot_links a{
+    font-size: 12px;
+    font-family:sans-serif;
+    color:#008ac0;  
+}
+
+.foot_links a{
+   cursor: pointer;
+   text-decoration: underline;
+}
+/*fotter logo properties*/
+.footer_logo{
+    width: 200px;
+    padding: 7px;
+    margin: 12px;
+}
+
+.copyright{
+   margin-top: 20px;
+   text-align: center;
+}

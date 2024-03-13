@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+
+section{
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+
+.sectionHuvudel{
+    background-color: #0075a3;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    font-family:"Josefin Sans", sans-serif;
+    font-weight: 500;
+    top: 300px;
+    padding-bottom: 20px;
+}
+.sectionTitel{
+    font-size: 4vw;
+    text-transform: uppercase;
+
+}
+
+.sectionText{
+    color: #000000;
+}
+
+
+
